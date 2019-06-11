@@ -2,22 +2,24 @@
 <html>
 <head>
     <title>Flask app</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styl.css') }}">
   </head>
   <body>
     <header>
       <div class="container">
-        <h1 class="logo">Ardit's web app</h1>
+          <img src="/static/Images/Mardus.png">
+        <h1 class="logo">Mardus Venter</h1>
         <strong><nav>
           <ul class="menu">
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('myInfo') }}">My Infromation</a></li>
+            <li><a href="{{ url_for('exp') }}">Experience</a></li>
           </ul>
         </nav></strong>
       </div>
     </header>
      <div class="container">
-      {% block content %}
+      {% block rasp %}
       {% endblock %}
     </div>
   </body>
